@@ -1,0 +1,19 @@
+{
+  "name": "reach",
+  "repo": "shallker/reach",
+  "description": "Listen browser window scroll position",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "shallker-wang/eventy": "*"
+  },
+  "development": {
+    "shallker/simple-test": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "lib/reach.js"
+  ]
+}

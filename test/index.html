@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <script src="/build/build.js"></script>
+  </head>
+  <body>
+    <script>
+      while (document.body.offsetHeight < 2000) {
+        document.write('<p>lorem</p>');
+      }
+    </script>
+    <script>
+      var reach = require('reach');
+      var test = require('simple-test');
+
+      test('reach.top()', function (done) {
+        reach.top(function () {
+          console.log('top');
+          done();
+        });
+      });
+
+      test('reach.middle()', function (done) {
+        reach.middle(function () {
+          console.log('middle');
+          done();
+        });
+      });
+
+      test('reach.bottom()', function (done) {
+        reach.bottom(function () {
+          console.log('bottom');
+          done();
+        });
+      });
+    </script>
+  </body>
+</html>
