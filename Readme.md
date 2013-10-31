@@ -1,7 +1,7 @@
 
 # reach
 
-  Listen browser window scroll position
+  Listen to browser window's scroll position
 
 ## Installation
 

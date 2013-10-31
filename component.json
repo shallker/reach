@@ -1,7 +1,7 @@
 {
   "name": "reach",
   "repo": "shallker/reach",
-  "description": "Listen browser window scroll position",
+  "description": "Listen to browser window's scroll position",
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
