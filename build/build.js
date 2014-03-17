@@ -826,19 +826,21 @@ function listenScroll(callback) {\n\
 }\n\
 \n\
 function onScroll(scroll) {\n\
+  var scrollX = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;\n\
+  var scrollY = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;\n\
   var scrollTop = getScrollTop();\n\
   var documentHeight = getDocumentHeight();\n\
   var middle = (documentHeight - window.innerHeight) / 2;\n\
 \n\
-  if (window.scrollY === 0) {\n\
+  if (scrollTop === 0) {\n\
     return reach.trigger('top');\n\
   }\n\
 \n\
-  if (middle - 20 < scrollY && scrollY < middle + 20) {\n\
+  if (middle - 20 < scrollTop && scrollTop < middle + 20) {\n\
     return reach.trigger('middle');\n\
   }\n\
 \n\
-  if (scrollTop >= documentHeight) {\n\
+  if (scrollTop + innerHeight + 20 >= documentHeight) {\n\
     return reach.trigger('bottom');\n\
   }\n\
 }\n\
